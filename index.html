@@ -244,7 +244,7 @@
     display:grid;
     grid-template-columns:1.1fr 0.9fr;
     gap:60px;
-    align-items:start;
+    align-items:center;
   }
   .about-grid p{
     color:var(--text-dim);
@@ -253,6 +253,22 @@
     margin-bottom:18px;
   }
   .about-grid strong{color:var(--text);}
+
+  /* Profile Picture styling */
+  .profile-container {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--pink);
+    box-shadow: 0 0 20px rgba(255, 92, 170, 0.3);
+  }
 
   .fact-card{
     background:var(--surface);
@@ -442,7 +458,7 @@
 <main>
 
   <section class="hero">
-    <div class="eyebrow mono">IDEAIL &middot; DEVELOPER</div>
+    <div class="eyebrow mono">IDEAL &middot; DEVELOPER</div>
     <h1>Building things<br>for the <span class="accent">web</span>,<br>one line at a time.</h1>
     <div class="terminal-line mono">
       <span id="typewriter"></span><span class="cursor"></span>
@@ -460,12 +476,15 @@
     </div>
     <div class="about-grid">
       <div class="reveal">
-        <p>Hi, I'm <strong>Thaveanesh Kumar</strong> — a Grade 11 student who started teaching myself <strong>HTML, C++,Python</strong> because I wanted to build the ideas in my head instead of just imagining them.</p>
+        <div class="profile-container">
+          <img src="thaveanesh kumar.jpega" alt="Thaveanesh Kumar" class="profile-pic">
+        </div>
+        <p>Hi, I'm <strong>Thaveanesh Kumar</strong> — a Grade 11 student who started teaching myself <strong>HTML, C++, and Python</strong> because I wanted to build the ideas in my head instead of just imagining them.</p>
       </div>
       <div class="reveal">
         <div class="fact-card"><div class="num">2</div><div class="label">months writing code consistently</div></div>
-        <div class="fact-card"><div class="num">0</div><div class="label">projects shipped so far</div></div>
-        <div class="fact-card"><div class="num">2</div><div class="label">core languages: HTML,Python</div></div>
+        <div class="fact-card"><div class="num">1</div><div class="label">project shipped so far</div></div>
+        <div class="fact-card"><div class="num">3</div><div class="label">core languages: HTML, CSS, Python</div></div>
       </div>
     </div>
   </section>
@@ -478,8 +497,8 @@
     <div class="skills-list reveal">
       <div class="skill-row">
         <div class="skill-name"><span class="dot" style="background:var(--pink)"></span>HTML</div>
-        <div class="xp-track"><div class="xp-fill" data-pct="10"></div></div>
-        <div class="skill-pct mono">10%</div>
+        <div class="xp-track"><div class="xp-fill" data-pct="40"></div></div>
+        <div class="skill-pct mono">40%</div>
       </div>
       <div class="skill-row">
         <div class="skill-name"><span class="dot" style="background:var(--amber)"></span>Python</div>
@@ -488,8 +507,13 @@
       </div>
       <div class="skill-row">
         <div class="skill-name"><span class="dot" style="background:var(--mint)"></span>C++</div>
-        <div class="xp-track"><div class="xp-fill" data-pct="5"></div></div>
-        <div class="skill-pct mono">5%</div>
+        <div class="xp-track"><div class="xp-fill" data-pct="15"></div></div>
+        <div class="skill-pct mono">15%</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-name"><span class="dot" style="background:var(--mint)"></span>CSS</div>
+        <div class="xp-track"><div class="xp-fill" data-pct="40"></div></div>
+        <div class="skill-pct mono">40%</div>
       </div>
     </div>
   </section>
@@ -502,19 +526,20 @@
     <div class="projects-grid reveal">
 
       <div class="project-card">
-  <div class="project-icon">🔐</div>
-  <h3>E-numberpad lock</h3>
-  <p>A secure virtual locker that uses 4-digit PIN authentication to lock and unlock saved personal notes and school documents using local storage.</p>
-  <div class="tag-row">
-    <span class="pill">C++</span>
-  </div>
-  <a href="https://wokwi.com/projects/344891391763022419"
-   class="project-link"
-   target="_blank"
-   rel="noopener noreferrer">
-   View project →
-</a>
-</div>
+        <div class="project-icon">🔐</div>
+        <h3>E-numberpad lock</h3>
+        <p>A secure virtual locker that uses 4-digit PIN authentication to lock and unlock saved personal notes and school documents using local storage.</p>
+        <div class="tag-row">
+          <span class="pill">C++</span>
+          <span class="pill">Python</span>
+        </div>
+        <a href="https://wokwi.com/projects/344891391763022419"
+           class="project-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          View project →
+        </a>
+      </div>
 
     </div>
   </section>
@@ -525,14 +550,15 @@
       <p>Whether it's a project idea, a question about how I built something here, or just to say hi — my inbox is open.</p>
       <div class="contact-links">
         <a href="mailto:thaveaneshkumar27052011@gmail.com" class="btn btn-primary">Email me</a>
-       <a href="https://www.instagram.com/pro_gramerss._/" class="btn btn-ghost" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/pro_gramerss._/" class="btn btn-ghost" target="_blank">Instagram</a>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  the only owner of this website is <strong>Thaveanesh Kumar Tanigarasu</strong> &middot; built with ❤️ &middot; 
+  The only owner of this website is <strong>Thaveanesh Kumar Tanigarasu</strong> &middot; built with ❤️
 </footer>
 
 <script>
