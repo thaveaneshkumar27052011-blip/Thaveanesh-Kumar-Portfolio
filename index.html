@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thaveanesh Kumar Thanigarasu — Student Developer</title>
+<title>Thaveanesh Kumar Tanigarasu — Student Developer</title>
 <link rel="icon" href="Designer.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #14102B;
-    --surface: #1E1840;
-    --surface-2: #251C4D;
-    --pink: #FF5CAA;
-    --amber: #FFB627;
-    --mint: #4CE0B3;
-    --text: #F5F3FF;
-    --text-dim: #B4ACD6;
-    --border: rgba(245,243,255,0.1);
+    /* Theme: Black, Blue, Red, and Gold */
+    --bg: #030712;          /* Deep Black */
+    --surface: #0B132B;     /* Dark Slate Blue */
+    --surface-2: #1C2541;   /* Medium Dark Blue */
+    --red: #E63946;         /* Crimson Red */
+    --gold: #FFD700;        /* Vivid Gold */
+    --blue: #3A86EF;        /* Electric Blue */
+    --text: #F8FAFC;        /* Light Text */
+    --text-dim: #94A3B8;    /* Muted Text */
+    --border: rgba(58, 134, 239, 0.18); /* Subtle Blue Border */
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -42,7 +43,7 @@
 
   .mono{font-family:'JetBrains Mono',monospace;}
 
-  /* background grid texture */
+  /* Background Grid Texture */
   .bg-grid{
     position:fixed;
     inset:0;
@@ -55,10 +56,11 @@
     z-index:0;
   }
 
+  /* Ambient Glows */
   .glow{
     position:fixed;
     width:600px;height:600px;
-    background:radial-gradient(circle, rgba(255,92,170,0.25), transparent 70%);
+    background:radial-gradient(circle, rgba(230,57,70,0.22), transparent 70%);
     top:-200px; left:-100px;
     pointer-events:none;
     z-index:0;
@@ -66,7 +68,7 @@
   .glow2{
     position:fixed;
     width:500px;height:500px;
-    background:radial-gradient(circle, rgba(76,224,179,0.15), transparent 70%);
+    background:radial-gradient(circle, rgba(58,134,239,0.22), transparent 70%);
     bottom:-100px; right:-150px;
     pointer-events:none;
     z-index:0;
@@ -79,7 +81,7 @@
     justify-content:space-between;
     align-items:center;
     padding:20px 6vw;
-    background:rgba(20,16,43,0.75);
+    background:rgba(3, 7, 18, 0.85);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
   }
@@ -91,21 +93,36 @@
     align-items:center;
     gap:6px;
   }
-  .logo span{color:var(--pink);}
+  .logo span{color:var(--gold);}
 
   nav ul{
     list-style:none;
     display:flex;
+    align-items:center;
     gap:32px;
   }
   nav a{
     font-size:0.95rem;
     color:var(--text-dim);
-    transition:color 0.2s;
+    transition:color 0.2s, background 0.2s;
     position:relative;
   }
   nav a:hover, nav a:focus-visible{color:var(--text);}
-  nav a:focus-visible{outline:2px solid var(--amber); outline-offset:4px; border-radius:2px;}
+  nav a:focus-visible{outline:2px solid var(--gold); outline-offset:4px; border-radius:2px;}
+
+  /* Hire Me Button inside Nav */
+  nav a.hire-btn {
+    color: var(--bg);
+    background: var(--gold);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  nav a.hire-btn:hover {
+    background: #E5C100;
+    color: var(--bg);
+    transform: translateY(-1px);
+  }
 
   .nav-toggle{
     display:none;
@@ -121,7 +138,7 @@
     margin:0 auto;
   }
 
-  /* HERO */
+  /* HERO SECTION */
   .hero{
     min-height:88vh;
     display:flex;
@@ -132,7 +149,7 @@
 
   .eyebrow{
     font-family:'JetBrains Mono',monospace;
-    color:var(--mint);
+    color:var(--gold);
     font-size:0.9rem;
     display:flex;
     align-items:center;
@@ -142,9 +159,9 @@
   .eyebrow::before{
     content:"";
     width:8px;height:8px;
-    background:var(--mint);
+    background:var(--gold);
     border-radius:50%;
-    box-shadow:0 0 12px var(--mint);
+    box-shadow:0 0 12px var(--gold);
     animation:pulse 2s infinite;
   }
   @keyframes pulse{
@@ -160,7 +177,7 @@
     max-width:900px;
   }
   .hero h1 .accent{
-    background:linear-gradient(90deg, var(--pink), var(--amber));
+    background:linear-gradient(90deg, var(--red), var(--gold));
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
@@ -176,7 +193,7 @@
   .terminal-line .cursor{
     display:inline-block;
     width:9px;height:1.1em;
-    background:var(--amber);
+    background:var(--blue);
     vertical-align:text-bottom;
     margin-left:2px;
     animation:blink 1s step-end infinite;
@@ -199,19 +216,19 @@
     transition:transform 0.2s, box-shadow 0.2s;
     display:inline-block;
   }
-  .btn:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+  .btn:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
   .btn-primary{
-    background:linear-gradient(90deg, var(--pink), #ff8a65);
-    color:#14102B;
+    background:linear-gradient(90deg, var(--red), #C0392B);
+    color:#FFFFFF;
   }
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(255,92,170,0.35);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(230,57,70,0.4);}
   .btn-ghost{
     border:1px solid var(--border);
     color:var(--text);
   }
-  .btn-ghost:hover{border-color:var(--mint); color:var(--mint);}
+  .btn-ghost:hover{border-color:var(--gold); color:var(--gold);}
 
-  /* SECTION HEADS */
+  /* SECTION HEADERS */
   .section-head{
     display:flex;
     align-items:baseline;
@@ -220,9 +237,9 @@
   }
   .section-head .tag{
     font-family:'JetBrains Mono',monospace;
-    color:var(--amber);
+    color:var(--gold);
     font-size:0.85rem;
-    border:1px solid rgba(255,182,39,0.3);
+    border:1px solid rgba(255,215,0,0.3);
     padding:4px 10px;
     border-radius:20px;
   }
@@ -240,7 +257,7 @@
     transform:translateY(0);
   }
 
-  /* ABOUT */
+  /* ABOUT SECTION */
   .about-grid{
     display:grid;
     grid-template-columns:1.1fr 0.9fr;
@@ -255,7 +272,6 @@
   }
   .about-grid strong{color:var(--text);}
 
-  /* Profile Picture styling */
   .profile-container {
     margin-bottom: 24px;
     display: flex;
@@ -267,8 +283,8 @@
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--pink);
-    box-shadow: 0 0 20px rgba(255, 92, 170, 0.3);
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   }
 
   .fact-card{
@@ -282,7 +298,7 @@
     font-family:'Space Grotesk',sans-serif;
     font-size:1.8rem;
     font-weight:700;
-    color:var(--pink);
+    color:var(--red);
   }
   .fact-card .label{
     color:var(--text-dim);
@@ -290,7 +306,7 @@
     margin-top:4px;
   }
 
-  /* SKILLS - XP bars */
+  /* SKILLS SECTION */
   .skills-list{
     display:flex;
     flex-direction:column;
@@ -324,7 +340,7 @@
     border-radius:20px;
     width:0%;
     transition:width 1.2s cubic-bezier(.2,.8,.2,1);
-    background:linear-gradient(90deg, var(--pink), var(--amber));
+    background:linear-gradient(90deg, var(--red), var(--gold));
   }
   .skill-pct{
     font-family:'JetBrains Mono',monospace;
@@ -333,7 +349,7 @@
     text-align:right;
   }
 
-  /* PROJECTS */
+  /* PROJECTS SECTION */
   .projects-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
@@ -351,8 +367,8 @@
   }
   .project-card:hover{
     transform:translateY(-6px);
-    border-color:rgba(255,92,170,0.4);
-    box-shadow:0 16px 40px rgba(0,0,0,0.35);
+    border-color:rgba(255,215,0,0.4);
+    box-shadow:0 16px 40px rgba(0,0,0,0.5);
   }
   .project-icon{
     width:44px;height:44px;
@@ -369,23 +385,23 @@
     font-size:0.75rem;
     padding:4px 10px;
     border-radius:20px;
-    background:rgba(76,224,179,0.1);
-    color:var(--mint);
-    border:1px solid rgba(76,224,179,0.25);
+    background:rgba(58,134,239,0.15);
+    color:var(--blue);
+    border:1px solid rgba(58,134,239,0.3);
   }
   .project-link{
     font-size:0.9rem;
     font-weight:600;
-    color:var(--amber);
+    color:var(--gold);
     display:inline-flex;
     align-items:center;
     gap:6px;
     margin-top:4px;
+    transition:gap 0.2s;
   }
   .project-link:hover{gap:10px;}
-  .project-link{transition:gap 0.2s;}
 
-  /* CONTACT */
+  /* CONTACT SECTION */
   .contact-box{
     background:linear-gradient(135deg, var(--surface), var(--surface-2));
     border:1px solid var(--border);
@@ -429,7 +445,7 @@
       display:none;
     }
     nav.open{display:flex;}
-    nav ul{flex-direction:column; gap:20px;}
+    nav ul{flex-direction:column; gap:20px; align-items:flex-start;}
     .nav-toggle{display:block;}
     .about-grid{grid-template-columns:1fr;}
     .skill-row{grid-template-columns:110px 1fr 44px; gap:12px;}
@@ -452,6 +468,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="hire-btn">Hire Me</a></li>
     </ul>
   </nav>
 </header>
@@ -459,7 +476,7 @@
 <main>
 
   <section class="hero">
-    <div class="eyebrow mono">IDEAL &middot; DEVELOPER</div>
+    <div class="eyebrow mono">Master &middot; Developer</div>
     <h1>Building things<br>for the <span class="accent">web</span>,<br>one line at a time.</h1>
     <div class="terminal-line mono">
       <span id="typewriter"></span><span class="cursor"></span>
@@ -478,7 +495,7 @@
     <div class="about-grid">
       <div class="reveal">
         <div class="profile-container">
-          <img src="thaveanesh kumar.jpeg" alt="Thaveanesh Kumar" class="profile-pic">
+          <img src="thaveanesh_kumar.jpeg" alt="Thaveanesh Kumar" class="profile-pic">
         </div>
         <p>Hi, I'm <strong>Thaveanesh Kumar</strong> — a Grade 11 student who started teaching myself <strong>HTML, C++, and Python</strong> because I wanted to build the ideas in my head instead of just imagining them.</p>
       </div>
@@ -497,22 +514,22 @@
     </div>
     <div class="skills-list reveal">
       <div class="skill-row">
-        <div class="skill-name"><span class="dot" style="background:var(--pink)"></span>HTML</div>
+        <div class="skill-name"><span class="dot" style="background:var(--red)"></span>HTML</div>
         <div class="xp-track"><div class="xp-fill" data-pct="40"></div></div>
         <div class="skill-pct mono">40%</div>
       </div>
       <div class="skill-row">
-        <div class="skill-name"><span class="dot" style="background:var(--amber)"></span>Python</div>
+        <div class="skill-name"><span class="dot" style="background:var(--gold)"></span>Python</div>
         <div class="xp-track"><div class="xp-fill" data-pct="15"></div></div>
         <div class="skill-pct mono">15%</div>
       </div>
       <div class="skill-row">
-        <div class="skill-name"><span class="dot" style="background:var(--mint)"></span>C++</div>
+        <div class="skill-name"><span class="dot" style="background:var(--blue)"></span>C++</div>
         <div class="xp-track"><div class="xp-fill" data-pct="15"></div></div>
         <div class="skill-pct mono">15%</div>
       </div>
       <div class="skill-row">
-        <div class="skill-name"><span class="dot" style="background:var(--mint)"></span>CSS</div>
+        <div class="skill-name"><span class="dot" style="background:var(--blue)"></span>CSS</div>
         <div class="xp-track"><div class="xp-fill" data-pct="40"></div></div>
         <div class="skill-pct mono">40%</div>
       </div>
@@ -563,7 +580,7 @@
 </footer>
 
 <script>
-  // mobile nav toggle
+  // Mobile Navigation Toggle
   const navToggle = document.getElementById('navToggle');
   const nav = document.getElementById('nav');
   navToggle.addEventListener('click', () => {
@@ -577,7 +594,7 @@
     });
   });
 
-  // typewriter effect
+  // Typewriter Effect
   const lines = [
     "console.log('still learning, still building');",
     "npm run build-my-future",
@@ -608,7 +625,7 @@
   }
   typeLoop();
 
-  // scroll reveal
+  // Scroll Reveal Animations
   const revealEls = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -620,7 +637,7 @@
   }, { threshold: 0.15 });
   revealEls.forEach(el => revealObserver.observe(el));
 
-  // XP bar fill on scroll into view
+  // XP Progress Bar Fill on Scroll
   const xpFills = document.querySelectorAll('.xp-fill');
   const xpObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
