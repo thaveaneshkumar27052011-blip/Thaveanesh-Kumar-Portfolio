@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thaveanesh Kumar Thanigarasu — Student Developer</title>
+<title>Thaveanesh Kumar Tanigarasu — Student Developer</title>
 <link rel="icon" href="logo-horizontal-solid.PNG" >
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -86,14 +86,16 @@
     border-bottom:1px solid var(--border);
   }
 
-  .logo{
-    font-weight:700;
-    font-size:1.1rem;
-    display:flex;
-    align-items:center;
-    gap:6px;
+  .logo {
+    display: flex;
+    align-items: center;
   }
-  .logo span{color:var(--gold);}
+  
+  .logo img {
+    height: 100px; 
+    width: auto;
+    object-fit: contain;
+  }
 
   nav ul{
     list-style:none;
@@ -460,7 +462,11 @@
 <div class="glow2"></div>
 
 <header>
-  <div class="logo">&lt;<span>Thaveanesh Kumar</span>/&gt;</div>
+  <div class="logo">
+  <a href="#">
+    <img src="logo-horizontal-transparent.png" alt="Thaveanesh Kumar Logo">
+  </a>
+</div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav id="nav">
     <ul>
